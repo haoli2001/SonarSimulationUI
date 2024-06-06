@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#这是服务器上用的脚本
+
+
+while true
+do
+	process = `ps -ef| grep FINSYS | grep -v grep`;
+	if [ "$process" == "" ];then
+		sleep 1;
+		echo "process down,now start";
+		nohup ./FINSYS >/dev/null 2>log &;
+	fi
+	sleep 3;
+done

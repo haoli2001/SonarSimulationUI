@@ -1,0 +1,85 @@
+﻿2022.1.10
+QtTablewidget类 加入信号 loadFileConfigModInfo(FileConfigModInfo* fileConfigModInfo, int maxNum);
+OnActionexcel（） 加入信号和槽的connet
+完成ErrorLog类，日志系统
+
+2022.1.12
+完善日志记录，加入日志level   四个level,由低到高：debug、info、warning、error
+完成错误处理。sonarSim类 加入curRpeatNum标记重复计算次数
+
+2022.1.14
+继续完善日志记录，已基本完成。  日志写入加入线程锁，防止线程冲突。
+目前发现的问题：1. 配置文件读取界面 对象在槽函数中new（点一下new一个）
+	     2. 配置文件读取界面有一些功能似没完善
+	     3. 最好把calcuType 移出config 结构体（服务器用不到这一项）   以上问题需要跟师姐沟通
+（该版本已git）
+
+
+2022.1.16
+完善日志记录。 修改了dataManger以及FluentData中判断模型文件加载的逻辑，使得模型文件没有被正确加载时
+程序能正确识别定位该错误。
+新增加了OnDisconnected函数，处理socket被异常中断的情况。
+
+
+2022.1.19
+OnActionexcel()  加入了对目前status的判断  未连接网络时无法进行文件配置
+OnActionStop()   加入了对curRepeatNum的判断， 从而得知是否是在出错自动重复运行的时候调用该函数发送停止帧
+	             且FILECONFIGMOD下将status最后置为WAITFORLOAD
+OnCalcOver（） FILECONFIGMOD下将status最后置为WAITFORLOAD
+重写SaveTimeIntegrationResultsFile 时域积分结果写入txt函数   做两个重载， 前者创建文件夹、后者写积分数据 不同地方调用
+sonarSim.h中加入curTimeIntegrationResultsPath成员，记录当前时域积分结果的路径
+
+ErrorHandlerFunction()  调整了写日志INFO的位置
+FluentData   类中增加成员 string moduleFilePath 记录载入的模型路径（暂没用到、以后或许有用）
+
+做了测试，基本功能无误。  文件配置页面似仍有bug
+
+2022.1.20
+完成主界面计算进度条
+（已git）
+
+2022.1.24
+现已将结果文件夹目录上传至数据库
+更改了原先两个widget对象点一下new一个的逻辑
+dataSavewidget类无法直接引用UserSql对象（不知道为什么）， 写了一个getUsrSql的新方法
+将calcuType 移出了config 结构体，并改为了int类型
+解决了创建文件夹时弹cmd窗口的问题
+
+2022.1.25
+修改了一些CLIENTCONFIGMOD 下主界面进度条的bug
+
+2022.2.17
+补上了文件配置模式下没有为config.select_device[]数组赋值的bug！！！
+对照服务器更正了了config结构体定义
+
+2022.3.11
+添加了多批次模式下对每一行单独的计算进度条支持   使用信号-槽机制
+已可以完全支持中文路径
+增加了计算前对配置信息中计算卡相关设置的判断，防止用户在excel中输入错误的数据
+当第一次收到结果数据时即向数据库报结果文件信息
+修改了错误处理函数ErrorHandlerFunction 的一些逻辑，以前在某些情况下可能会疯狂的弹提示窗口
+完善了一些日志
+修改SaveTimeIntegrationResultsFile 函数的重载，负责创建文件夹的重载现在改名为CreatTimeIntegrationResultsFolder，
+并且都增加了int类型的返回值以判断是否成功
+2022.3.11   ------- 柯静
+1、修改了数据库存储界面模糊查询，使用Like 'string%'
+2、在tableview中添加查看按钮替换之前的双击查看波形图
+3、修复了删除下拉框用户信息但没有删除用户信息文件夹的问题
+4、添加了登录界面当lineEdit_Account中账户不在数据库中时，lineEdit_Password和check_remember设为空
+5、将登录界面最小化到系统托盘修改为最小化到任务栏
+
+2022.3.23
+界面右侧配置信息栏增加滚动条，以防止部分信息被GPU WATCH窗口遮盖
+
+2022.4.1
+第一个版本,完全可用
+
+2022.4.7
+增加了断线重连功能，使得服务器挂掉之后仍能继续从上一个角度开始计算
+修改了ErrorHandlerFunction的逻辑，出现错误三次重试仍出错后将视情况直接进行下一条次的计算
+绘图的时候排除了数据中的正无穷与负无穷的值（大于10e10量级）,保证绘图正确
+
+该版本与release版本保持一致，可用
+
+2024.6.6
+删去了无用qss，现在可以在vs2017，qt5.14.2编译

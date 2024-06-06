@@ -1,0 +1,29 @@
+#version 330 core
+
+layout (location = 0) in vec3 pos;
+layout (location = 1) in vec3 acolor;
+out vec4 ocolor;
+
+uniform mat4 projection;
+uniform int drawtype;
+// 1 : ±ßÏß
+// 2 : ÃæÆ¬
+// 3 £º°üÎ§ºÐ
+uniform mat4 view;
+uniform mat4 model;
+uniform mat4 modeltranslate;
+
+void main()
+{
+	gl_Position=projection * view * model * modeltranslate * vec4(pos,1);
+	if(drawtype == 1)
+	{
+		ocolor=vec4(0,0,125,1);
+	}
+	else if(drawtype == 2)
+	{
+		ocolor=vec4(acolor,0.5);
+	}
+	else if(drawtype == 3)
+		ocolor=vec4(0,0,0,0);
+}

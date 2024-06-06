@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Login</class>
+ <widget class="QWidget" name="Login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>441</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login</string>
+  </property>
+  <widget class="QWidget" name="widget_main" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>551</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#widget_main{
+border-radius: 10px;
+border-style:solid;
+background-color: rgba(255, 255, 255, 0);
+}</string>
+   </property>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>280</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QCheckBox" name="checkBox_remember">
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(149, 149, 149);</string>
+       </property>
+       <property name="text">
+        <string>记住密码</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_forget">
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushButton_forget{
+color: rgb(149, 149, 149);
+background-color: rgba(255, 255, 255, 0);
+}
+#pushButton_forget:hover{
+color: rgb(120, 120, 120);
+background-color: rgba(255, 255, 255, 0);
+}</string>
+       </property>
+       <property name="text">
+        <string>忘记密码？</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_signin">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>340</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>13</pointsize>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_signin{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+}
+#pushButton_signin:hover{
+background-color: rgb(99, 170, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+
+}
+#pushButton_signin:pressed{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:2px;
+padding-top:2px;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>登录</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_main">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>551</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+border-top-left-radius:10px;
+border-top-right-radius:10px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>150</y>
+      <width>551</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_password">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>220</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>12</pointsize>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style:solid;
+border-width:1px;
+border-top-color: rgba(255, 255, 255, 0);
+border-right-color: rgba(255, 255, 255, 0);
+border-left-color: rgba(255, 255, 255, 0);
+border-bottom-color: rgb(129, 129, 129);</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>密码</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>170</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox 
+{ 
+font-size:15px;
+}
+QComboBox QAbstractItemView::item
+{
+min-height: 50px; 
+min-width: 60px; 
+
+}
+::drop-down{
+	border-style:solid;
+	border-width:1px;
+	width:20px ;
+	background-color: rgb(255, 255, 255);
+	border-bottom-color: rgb(129, 129, 129);
+}
+::down-arrow{	
+	border-image: url(:/SonarSimulationUI/icon/jiantou.png);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_account">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>170</y>
+      <width>253</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>12</pointsize>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style:solid;
+border-width:1px;
+border-top-color: rgba(255, 255, 255, 0);
+border-right-color: rgba(255, 255, 255, 0);
+border-left-color: rgba(255, 255, 255, 0);
+border-bottom-color: rgb(129, 129, 129);</string>
+    </property>
+    <property name="placeholderText">
+     <string>用户名</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_register">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>380</y>
+      <width>94</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>9</pointsize>
+      <stylestrategy>PreferAntialias</stylestrategy>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pushButton_register{
+color: rgb(149, 149, 149);
+background-color: rgba(255, 255, 255, 0);
+}
+#pushButton_register:hover{
+color: rgb(120, 120, 120);
+background-color: rgba(255, 255, 255, 0);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>注册账号&gt;&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>561</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <stylestrategy>PreferAntialias</stylestrategy>
+        </font>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_min">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="sizeIncrement">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#toolButton_min{
+border-style:solid;
+background-color: rgba(255, 255, 255, 0);
+border-image: url(:/SonarSimulationUI/icon/min.png);
+}
+#toolButton_min:hover{
+border-style:solid;
+background-color: rgba(211, 211, 211);
+border-image: url(:/SonarSimulationUI/icon/min.png);
+}
+#toolButton_min:pressed{
+border-style:solid;
+background-color: rgb(145, 145, 145);
+border-image: url(:/SonarSimulationUI/icon/min.png);
+
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_close">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#toolButton_close{
+border-style:solid;
+background-color: rgba(255, 255, 255, 0);
+border-image: url(:/SonarSimulationUI/icon/close.png);
+}
+#toolButton_close:hover{
+border-style:solid;
+background-color: rgb(255, 0, 0);
+border-image: url(:/SonarSimulationUI/icon/close.png);
+}
+#toolButton_close:pressed{
+border-style:solid;
+background-color: rgb(255, 0, 0);
+border-image: url(:/SonarSimulationUI/icon/close.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>551</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(253, 255, 240);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_register">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>40</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>用户注册</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>130</y>
+        <width>321</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_account">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(94, 94, 94);</string>
+         </property>
+         <property name="text">
+          <string>用 户  </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_account2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="placeholderText">
+          <string>请输入用户名</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>210</y>
+        <width>321</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_password">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(94, 94, 94);</string>
+         </property>
+         <property name="text">
+          <string>密 码  </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_password2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="placeholderText">
+          <string>请输入密码</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_back">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>320</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_back{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+}
+#pushButton_back:hover{
+background-color: rgb(99, 170, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+
+}
+#pushButton_back:pressed{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:2px;
+padding-top:2px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_register2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>320</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>13</pointsize>
+        <stylestrategy>PreferAntialias</stylestrategy>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_register2{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+}
+#pushButton_register2:hover{
+background-color: rgb(99, 170, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+
+}
+#pushButton_register2:pressed{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:2px;
+padding-top:2px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>立即注册</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_forgetpassword">
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>找回密码</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>110</y>
+        <width>321</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_account_2">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <stylestrategy>PreferAntialias</stylestrategy>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(94, 94, 94);</string>
+         </property>
+         <property name="text">
+          <string>账   户     </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_account3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="placeholderText">
+          <string>请输入用户名</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>170</y>
+        <width>321</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_password_2">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(94, 94, 94);</string>
+         </property>
+         <property name="text">
+          <string>新密码     </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_password3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="placeholderText">
+          <string>请输入密码</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>230</y>
+        <width>321</width>
+        <height>52</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_password_3">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(94, 94, 94);</string>
+         </property>
+         <property name="text">
+          <string>确认密码  </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_newpassword">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="placeholderText">
+          <string>请输入密码</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_back2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>320</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_back2{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+}
+#pushButton_back2:hover{
+background-color: rgb(99, 170, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+
+}
+#pushButton_back2:pressed{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:2px;
+padding-top:2px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>返回</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_submit">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>320</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>13</pointsize>
+        <stylestrategy>PreferAntialias</stylestrategy>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_submit{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+}
+#pushButton_submit:hover{
+background-color: rgb(99, 170, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+
+}
+#pushButton_submit:pressed{
+background-color: rgb(99, 188, 255);
+color: rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:2px;
+padding-top:2px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>确认修改</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>label_4</zorder>
+   <zorder>label_main</zorder>
+   <zorder>horizontalLayoutWidget</zorder>
+   <zorder>pushButton_signin</zorder>
+   <zorder>lineEdit_password</zorder>
+   <zorder>comboBox</zorder>
+   <zorder>lineEdit_account</zorder>
+   <zorder>pushButton_register</zorder>
+   <zorder>horizontalWidget</zorder>
+   <zorder>stackedWidget</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="sonarsimulationui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_forget</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OnpushButtonForget()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>407</x>
+     <y>316</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>406</x>
+     <y>-123</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_register</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OnpushButtonRegister()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>543</x>
+     <y>416</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>401</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_close</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OntoolButtonClose()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButton_min</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OntoolButtonMin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>499</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>459</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_signin</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OnpushButtonSignin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>831</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_submit</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OnpushButtonSubmit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>377</x>
+     <y>778</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>956</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_back2</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OnpushButtonBack2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>778</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>956</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_back</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OnpushButtonBack()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>723</x>
+     <y>347</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>707</x>
+     <y>956</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_register2</sender>
+   <signal>clicked()</signal>
+   <receiver>Login</receiver>
+   <slot>OnpushButtonRegister2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>887</x>
+     <y>369</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>857</x>
+     <y>950</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>OntoolButtonMin()</slot>
+  <slot>OntoolButtonClose()</slot>
+  <slot>OnpushButtonSignin()</slot>
+  <slot>OnpushButtonRegister()</slot>
+  <slot>OnpushButtonRegister2()</slot>
+  <slot>OnpushButtonBack()</slot>
+  <slot>OnpushButtonBack2()</slot>
+  <slot>OnpushButtonSubmit()</slot>
+  <slot>OnpushButtonForget()</slot>
+  <slot>OnComboBoxCurrentIndexChanged(int)</slot>
+ </slots>
+</ui>

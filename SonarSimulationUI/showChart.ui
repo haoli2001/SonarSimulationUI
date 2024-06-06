@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>showChart</class>
+ <widget class="QWidget" name="showChart">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>647</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>showChart</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="4">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>353</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_before">
+     <property name="text">
+      <string>上一页</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>353</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButton_next">
+     <property name="text">
+      <string>下一页</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="5">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>波形图</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="CustomPlot" name="widget_wave" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>200</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QPushButton" name="pushButton_save">
+     <property name="text">
+      <string>保存</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CustomPlot</class>
+   <extends>QWidget</extends>
+   <header>customplot.h</header>
+   <container>1</container>
+   <slots>
+    <slot>OnRadioButtonScanAngle(bool)</slot>
+    <slot>OnRadioButtonScanFrequrency(bool)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_save</sender>
+   <signal>clicked()</signal>
+   <receiver>showChart</receiver>
+   <slot>OnPushButtonSave()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>573</x>
+     <y>622</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>586</x>
+     <y>944</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_next</sender>
+   <signal>clicked()</signal>
+   <receiver>showChart</receiver>
+   <slot>OnPushButtonNext()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>467</x>
+     <y>624</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>861</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_before</sender>
+   <signal>clicked()</signal>
+   <receiver>showChart</receiver>
+   <slot>OnPushButtonBefore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>379</x>
+     <y>621</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>790</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>OnPushButtonSave()</slot>
+  <slot>OnPushButtonBefore()</slot>
+  <slot>OnPushButtonNext()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,37 @@
+<RCC>
+  <qresource prefix="/SonarSimulationUI">
+    <file>icon/delete.png</file>
+    <file>icon/delete2.png</file>
+    <file>icon/close.png</file>
+    <file>icon/Database.png</file>
+    <file>icon/min.png</file>
+    <file>icon/3d.png</file>
+    <file>icon/conf.png</file>
+    <file>icon/jiantou.png</file>
+    <file>icon/connect.png</file>
+    <file>icon/info.png</file>
+    <file>icon/list.png</file>
+    <file>icon/loading1.gif</file>
+    <file>icon/loading2.gif</file>
+    <file>icon/New.png</file>
+    <file>icon/Open.png</file>
+    <file>icon/Run.png</file>
+    <file>icon/Save.png</file>
+    <file>icon/Stop.png</file>
+    <file>icon/watch.png</file>
+    <file>icon/wave.png</file>
+    <file>icon/account.png</file>
+    <file>icon/suo.png</file>
+    <file>icon/mian.gif</file>
+    <file>icon/background.png</file>
+  </qresource>
+  <qresource prefix="/">
+    <file>Resources/go-down-symbolic.symbolic.png</file>
+    <file>Resources/go-next-symbolic.symbolic.png</file>
+    <file>Resources/go-previous-symbolic.symbolic.png</file>
+    <file>Resources/go-up-symbolic.symbolic.png</file>
+    <file>Resources/object-select-symbolic.symbolic.png</file>
+    <file>Resources/ElegantDark.qss</file>
+    <file>Resources/Ubuntu.qss</file>
+  </qresource>
+</RCC>

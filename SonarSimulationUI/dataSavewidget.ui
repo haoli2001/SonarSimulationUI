@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dataSavewidget</class>
+ <widget class="QWidget" name="dataSavewidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1245</width>
+    <height>751</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>dataSavewidget</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>查询</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_id">
+        <property name="text">
+         <string>序号：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_id"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_excelname">
+        <property name="text">
+         <string>配置文件名：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="lineEdit_excelname"/>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_time">
+        <property name="text">
+         <string>保存时间：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLineEdit" name="lineEdit_time"/>
+      </item>
+      <item row="0" column="6">
+       <widget class="QPushButton" name="pushButton_query">
+        <property name="text">
+         <string>查询</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>保存文件</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_display">
+          <property name="text">
+           <string>显示全表</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_wave">
+          <property name="text">
+           <string>查看波形图</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_dbconnect">
+          <property name="text">
+           <string>数据库连接提示</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_add">
+          <property name="text">
+           <string>添加</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_delete">
+          <property name="text">
+           <string>删除</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_cancel">
+          <property name="text">
+           <string>取消</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_submit">
+          <property name="text">
+           <string>确定</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <widget class="QTableView" name="tableView"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_display</sender>
+   <signal>clicked()</signal>
+   <receiver>dataSavewidget</receiver>
+   <slot>OnPushbuttonDisplay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>675</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>852</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_add</sender>
+   <signal>clicked()</signal>
+   <receiver>dataSavewidget</receiver>
+   <slot>OnPushbuttonAdd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>641</x>
+     <y>671</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>636</x>
+     <y>833</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_delete</sender>
+   <signal>clicked()</signal>
+   <receiver>dataSavewidget</receiver>
+   <slot>OnPushbuttonDelete()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>749</x>
+     <y>673</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>825</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>dataSavewidget</receiver>
+   <slot>OnPushbuttonCancel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>821</x>
+     <y>682</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>822</x>
+     <y>823</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_submit</sender>
+   <signal>clicked()</signal>
+   <receiver>dataSavewidget</receiver>
+   <slot>OnPushbuttonSubmit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>945</x>
+     <y>672</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>934</x>
+     <y>800</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_query</sender>
+   <signal>clicked()</signal>
+   <receiver>dataSavewidget</receiver>
+   <slot>OnPushbuttonQuery()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>958</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>999</x>
+     <y>-123</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>OnPushbuttonDisplay()</slot>
+  <slot>OnPushbuttonQuery()</slot>
+  <slot>OnPushbuttonAdd()</slot>
+  <slot>OnPushbuttonDelete()</slot>
+  <slot>OnPushbuttonSubmit()</slot>
+  <slot>OnPushbuttonCancel()</slot>
+  <slot>OntableView_doubleClicked()</slot>
+ </slots>
+</ui>
